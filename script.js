@@ -1,15 +1,19 @@
 function firstWord(s) {
   // your code here
-	str = str.trim();
+	 // Trim leading spaces to handle cases like "  Hello World"
+  str = str.trim();
 
-	if(str === "") return"";
+  // If string is empty after trimming, return empty string
+  if (str === "") return "";
 
-	let spaceIndex = str.indexOf(" ");
-	
-	if (spaceIndex === -1) return str;
-	
-    return str.substring(0, spaceIndex);
+  // Find index of first space
+  let spaceIndex = str.indexOf(" ");
 
+  // If there is no space, return the entire string
+  if (spaceIndex === -1) return str;
+
+  // Return substring from start to the first space
+  return str.substring(0, spaceIndex);
 	
 	
 }
